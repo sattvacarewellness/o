@@ -5,6 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SattvaCare Wellness</title>
 
+<meta name="description" content="SattvaCare Wellness – Transform your life with Yoga, Ayurveda, Naturopathy, Lifestyle Guidance, Success Training, and holistic coaching. Join our community today.">
+<meta name="keywords" content="SattvaCare, wellness, Yoga, Ayurveda, Naturopathy, Lifestyle Guidance, Success Training, mental well-being, fitness coaching, personality development, holistic transformation">
+<meta name="author" content="SattvaCare Wellness">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://your-github-pages-url.github.io/">
+
+<meta property="og:title" content="SattvaCare Wellness – Your Wellness Care-Taker">
+<meta property="og:description" content="Join SattvaCare to transform your life with holistic wellness guidance, lifestyle coaching, yoga, Ayurveda, naturopathy, and success training.">
+<meta property="og:image" content="https://your-site-url/logo.png">
+<meta property="og:url" content="https://your-github-pages-url.github.io/">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SattvaCare Wellness – Your Wellness Care-Taker">
+<meta name="twitter:description" content="Join SattvaCare to transform your life with holistic wellness guidance, lifestyle coaching, yoga, Ayurveda, naturopathy, and success training.">
+<meta name="twitter:image" content="https://your-site-url/logo.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "SattvaCare Wellness",
+  "url": "https://your-github-pages-url.github.io/",
+  "logo": "https://your-site-url/logo.png",
+  "sameAs": [
+    "https://www.linkedin.com/company/sattvacare-wellness",
+    "https://www.instagram.com/sattvacarewellness?igsh=MW51czZic3dieW80NA==",
+    "https://wa.me/qr/WZSCIEHYP3OPD1"
+  ],
+  "description": "Transform your life with Yoga, Ayurveda, Naturopathy, Lifestyle Guidance, Success Training, and holistic coaching. Join our community today.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Your City",
+    "addressRegion": "Your State",
+    "addressCountry": "India"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91XXXXXXXXXX",
+    "contactType": "customer service"
+  },
+  "priceRange": "₹499/month"
+}
+</script>
+
 <style>
 :root {
   --gold-dark: #b08a2e;
@@ -14,236 +59,59 @@
   --text-muted: #555;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-body {
-  font-family: "Inter", system-ui, sans-serif;
-  background: var(--bg-soft);
-  color: var(--text-main);
-  line-height: 1.6;
-}
+body { font-family: "Inter", system-ui, sans-serif; background: var(--bg-soft); color: var(--text-main); line-height: 1.6; }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 7%;
-}
+.container { max-width: 1200px; margin: auto; padding: 0 7%; }
 
-section {
-  padding: 90px 0;
-}
+section { padding: 90px 0; }
 
-.fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
+.fade { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+.fade.show { opacity: 1; transform: translateY(0); }
 
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+header { padding: 22px 0; border-bottom: 1px solid rgba(0,0,0,0.05); background: #fff; position: sticky; top: 0; z-index: 100; }
 
-header {
-  padding: 22px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  background: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+.nav { display: flex; align-items: center; justify-content: space-between; }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 40px; }
+.logo span { font-weight: 600; font-size: 1.1rem; background: linear-gradient(to right, var(--gold-light), var(--gold-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+.hero { text-align: center; padding: 110px 0; }
+.hero h1 { font-size: 2.8rem; font-weight: 600; }
+.hero h1 span { background: linear-gradient(to right, var(--gold-light), var(--gold-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { margin-top: 14px; font-size: 1.15rem; color: var(--text-muted); font-style: italic; }
 
-.logo img {
-  height: 40px;
-}
+.buttons { margin-top: 35px; }
+.btn { display: inline-block; margin: 10px; padding: 14px 30px; border-radius: 30px; font-size: 0.95rem; text-decoration: none; border: 1px solid var(--gold-dark); color: var(--gold-dark); transition: all 0.3s ease; }
+.btn.primary { background: linear-gradient(to right, var(--gold-light), var(--gold-dark)); color: #fff; border: none; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(176,138,46,0.25); }
 
-.logo span {
-  font-weight: 600;
-  font-size: 1.1rem;
-  background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+.info-section { background: #fff7e6; border-left: 6px solid var(--gold-dark); padding: 40px 30px; margin: 50px 0; border-radius: 12px; }
+.info-section h3 { color: var(--gold-dark); margin-bottom: 15px; font-size: 1.25rem; }
+.info-section p { color: var(--text-main); margin-bottom: 15px; font-size: 1rem; }
 
-.hero {
-  text-align: center;
-  padding: 110px 0;
-}
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-top: 50px; }
+.card, .box { background: #fff; padding: 30px; border-radius: 18px; border: 1px solid rgba(176,138,46,0.2); transition: all 0.3s ease; position: relative; }
+.card:hover, .box:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(176,138,46,0.2); }
+.card h3, .box h3 { color: var(--gold-dark); margin-bottom: 10px; }
+.card p, .box p, .box li { color: var(--text-muted); font-size: 0.95rem; }
 
-.hero h1 {
-  font-size: 2.8rem;
-  font-weight: 600;
-}
+.dual { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 40px; margin-top: 40px; }
+.dual .btn-small { display: inline-block; margin-top: 15px; padding: 10px 18px; font-size: 0.85rem; border-radius: 25px; border: 1px solid var(--gold-dark); color: var(--gold-dark); text-decoration: none; transition: all 0.3s ease; }
+.dual .btn-small.primary { background: linear-gradient(to right, var(--gold-light), var(--gold-dark)); color: #fff; border: none; }
+.dual .btn-small:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(176,138,46,0.25); }
 
-.hero h1 span {
-  background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-  margin-top: 14px;
-  font-size: 1.15rem;
-  color: var(--text-muted);
-  font-style: italic;
-}
-
-.buttons {
-  margin-top: 35px;
-}
-
-.btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 14px 30px;
-  border-radius: 30px;
-  font-size: 0.95rem;
-  text-decoration: none;
-  border: 1px solid var(--gold-dark);
-  color: var(--gold-dark);
-  transition: all 0.3s ease;
-}
-
-.btn.primary {
-  background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
-  color: #fff;
-  border: none;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(176,138,46,0.25);
-}
-
-.info-section {
-  background: #fff7e6;
-  border-left: 6px solid var(--gold-dark);
-  padding: 40px 30px;
-  margin: 50px 0;
-  border-radius: 12px;
-}
-
-.info-section h3 {
-  color: var(--gold-dark);
-  margin-bottom: 15px;
-  font-size: 1.25rem;
-}
-
-.info-section p {
-  color: var(--text-main);
-  margin-bottom: 15px;
-  font-size: 1rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.card, .box {
-  background: #fff;
-  padding: 30px;
-  border-radius: 18px;
-  border: 1px solid rgba(176,138,46,0.2);
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.card:hover, .box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(176,138,46,0.2);
-}
-
-.card h3, .box h3 {
-  color: var(--gold-dark);
-  margin-bottom: 10px;
-}
-
-.card p, .box p, .box li {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-.dual {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.dual .btn-small {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  font-size: 0.85rem;
-  border-radius: 25px;
-  border: 1px solid var(--gold-dark);
-  color: var(--gold-dark);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.dual .btn-small.primary {
-  background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
-  color: #fff;
-  border: none;
-}
-
-.dual .btn-small:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(176,138,46,0.25);
-}
-
-.connect {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.socials .btn-social {
-  display: inline-block;
-  margin: 10px 14px;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
+.connect { text-align: center; margin-top: 40px; }
+.socials .btn-social { display: inline-block; margin: 10px 14px; padding: 12px 28px; border-radius: 30px; font-size: 0.95rem; text-decoration: none; color: #fff; font-weight: 500; transition: all 0.3s ease; }
 .socials .linkedin {background: #0077b5;}
 .socials .instagram {background: #e1306c;}
 .socials .whatsapp {background: #25d366;}
+.socials .btn-social:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 
-.socials .btn-social:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
+footer { padding: 40px 0 20px; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
 
-footer {
-  padding: 40px 0 20px;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
 </style>
 </head>
 
@@ -252,11 +120,13 @@ footer {
 <header>
   <div class="container nav">
     <div class="logo">
-      <img src="logo.png" alt="SattvaCare Logo">
+      <img src="logo.png" alt="SattvaCare Wellness Logo">
       <span>SattvaCare Wellness</span>
     </div>
   </div>
 </header>
+
+<main>
 
 <section class="hero fade">
   <div class="container">
@@ -359,6 +229,8 @@ footer {
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   © SattvaCare Wellness — Structured Growth. Balanced Life.
