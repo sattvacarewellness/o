@@ -1,40 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SattvaCare Wellness</title>
+
 <style>
-/* ========== SATTVACARE THEME ========== */
 :root {
-  --saffron: #c28a2c;
-  --soft-gold: #e7c36a;
-  --warm-beige: #f8f4ec;
-  --charcoal: #1f1f1f;
-  --soft-gray: #6b6b6b;
-  --border-soft: rgba(194,138,44,0.25);
+  --gold-dark: #b08a2e;
+  --gold-light: #e6c873;
+  --bg-soft: #f8f6f2;
+  --text-main: #1e1e1e;
+  --text-muted: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--warm-beige);
-  color: var(--charcoal);
-  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg-soft);
+  color: var(--text-main);
+  line-height: 1.6;
 }
 
-.sattva-container {
-  max-width: 1300px;
+.container {
+  max-width: 1200px;
   margin: auto;
-  padding: 0 8%;
+  padding: 0 7%;
 }
 
-/* ========== HERO ========== */
+section {
+  padding: 90px 0;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+header {
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hero {
-  padding: 90px 0 80px;
   text-align: center;
+  padding: 110px 0;
 }
 
 .hero h1 {
-  font-size: 2.7rem;
+  font-size: 2.8rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
 .hero h1 span {
-  background: linear-gradient(to right, var(--soft-gold), var(--saffron));
+  background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -42,215 +100,192 @@ body {
 .hero p {
   margin-top: 14px;
   font-size: 1.15rem;
-  color: var(--soft-gray);
+  color: var(--text-muted);
   font-style: italic;
 }
 
-.divider {
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(to right, var(--soft-gold), var(--saffron));
-  margin: 26px auto 36px;
-  border-radius: 4px;
+.buttons {
+  margin-top: 35px;
 }
 
-/* ========== BUTTONS ========== */
-.cta-group {
-  margin-top: 30px;
-}
-
-.cta-btn {
+.btn {
   display: inline-block;
   margin: 10px;
-  padding: 13px 26px;
-  border-radius: 28px;
+  padding: 14px 30px;
+  border-radius: 30px;
   font-size: 0.95rem;
-  font-weight: 500;
   text-decoration: none;
-  border: 1px solid var(--saffron);
-  color: var(--saffron);
-  transition: all 0.25s ease;
+  border: 1px solid var(--gold-dark);
+  color: var(--gold-dark);
+  transition: all 0.3s ease;
 }
 
-.cta-btn.primary {
-  background: linear-gradient(to right, var(--soft-gold), var(--saffron));
-  color: #ffffff;
+.btn.primary {
+  background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
+  color: #fff;
   border: none;
 }
 
-.cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(194,138,44,0.25);
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(176,138,46,0.25);
 }
 
-/* ========== SECTION ========== */
-.section {
-  padding: 80px 0;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.section-subtitle {
-  text-align: center;
-  max-width: 760px;
-  margin: 14px auto 0;
-  color: var(--soft-gray);
-}
-
-/* ========== BENEFITS GRID ========== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+  gap: 30px;
   margin-top: 50px;
 }
 
 .card {
-  background: #ffffff;
-  padding: 28px;
-  border-radius: 16px;
-  border: 1px solid var(--border-soft);
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(176,138,46,0.2);
 }
 
 .card h3 {
-  color: var(--saffron);
-  font-size: 1.05rem;
+  color: var(--gold-dark);
   margin-bottom: 10px;
+  font-size: 1.05rem;
 }
 
 .card p {
+  color: var(--text-muted);
   font-size: 0.95rem;
-  color: var(--soft-gray);
-  line-height: 1.55;
 }
 
-/* ========== WHO FOR / NOT FOR ========== */
 .dual {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 36px;
-  margin-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 40px;
 }
 
 .box {
-  background: #ffffff;
-  padding: 34px;
+  background: #fff;
+  padding: 35px;
   border-radius: 18px;
-  border: 1px solid var(--border-soft);
+  border: 1px solid rgba(176,138,46,0.2);
 }
 
 .box h3 {
-  color: var(--saffron);
-  margin-bottom: 18px;
-}
-
-.box ul {
-  padding-left: 18px;
+  color: var(--gold-dark);
+  margin-bottom: 15px;
 }
 
 .box li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
-  color: var(--soft-gray);
+  color: var(--text-muted);
 }
 
-/* ========== CONNECT ========== */
 .connect {
   text-align: center;
 }
 
 .socials a {
-  margin: 0 12px;
+  margin: 0 14px;
   text-decoration: none;
+  color: var(--gold-dark);
   font-weight: 500;
-  color: var(--saffron);
 }
 
-/* ========== FOOTER ========== */
-.footer {
-  margin-top: 80px;
-  padding: 40px 0 15px;
+footer {
+  padding: 40px 0 20px;
   text-align: center;
-  border-top: 1px solid var(--border-soft);
   font-size: 0.85rem;
-  color: var(--soft-gray);
+  color: var(--text-muted);
 }
 </style>
+</head>
 
-<!-- ========== HERO ========== -->
-<div class="sattva-container hero">
-  <h1><span>SattvaCare Wellness</span></h1>
-  <p>“From Sattva arises Wellness”</p>
-  <div class="divider"></div>
+<body>
 
-  <div class="cta-group">
-    <a href="#connect" class="cta-btn">Join Community Today – Free</a>
-    <a href="#connect" class="cta-btn">Book Free Consultation</a>
-    <a href="#connect" class="cta-btn primary">Become an Official Member</a>
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <img src="logo.png" alt="SattvaCare Logo">
+      <span>SattvaCare Wellness</span>
+    </div>
   </div>
-</div>
+</header>
 
-<!-- ========== MEMBERSHIP BENEFITS ========== -->
-<div class="sattva-container section">
-  <h2 class="section-title">Membership Benefits</h2>
-  <p class="section-subtitle">
-    A structured ecosystem for complete human optimization — health, mind, conduct, and success.
-  </p>
+<section class="hero fade">
+  <div class="container">
+    <h1><span>SattvaCare Wellness</span></h1>
+    <p>From Sattva arises Wellness</p>
 
-  <div class="grid">
-    <div class="card"><h3>Expert Mentorship</h3><p>Certified professionals guiding health, lifestyle, and performance.</p></div>
-    <div class="card"><h3>Lifestyle Coaching</h3><p>Daily routines, habit systems, and disciplined living.</p></div>
-    <div class="card"><h3>Health Transformation</h3><p>Ayurveda, naturopathy, nutrition, and preventive care.</p></div>
-    <div class="card"><h3>Fitness & Vitality</h3><p>Strength, flexibility, endurance, and energy optimization.</p></div>
-    <div class="card"><h3>Mental Well-Being</h3><p>Clarity, focus, emotional regulation, and resilience.</p></div>
-    <div class="card"><h3>Personality Development</h3><p>Confidence, discipline, leadership presence.</p></div>
-    <div class="card"><h3>Success Coaching</h3><p>Goal clarity, execution systems, life strategy.</p></div>
-    <div class="card"><h3>Yoga • Ayurveda • Naturopathy</h3><p>Ancient sciences applied practically to modern life.</p></div>
+    <div class="buttons">
+      <a href="#connect" class="btn">Join Community – Free</a>
+      <a href="#connect" class="btn">Book Free Consultation</a>
+      <a href="#connect" class="btn primary">Become an Official Member</a>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- ========== WHO IT IS FOR ========== -->
-<div class="sattva-container section">
-  <div class="dual">
+<section class="fade">
+  <div class="container">
+    <h2 style="text-align:center;">Membership Benefits</h2>
+
+    <div class="grid">
+      <div class="card"><h3>Expert Mentorship</h3><p>Certified professionals guiding your transformation.</p></div>
+      <div class="card"><h3>Lifestyle Coaching</h3><p>Daily structure, habits, and discipline.</p></div>
+      <div class="card"><h3>Health & Fitness</h3><p>Energy, strength, and preventive care.</p></div>
+      <div class="card"><h3>Mental Well-being</h3><p>Clarity, emotional stability, inner strength.</p></div>
+      <div class="card"><h3>Personality Development</h3><p>Confidence, presence, leadership.</p></div>
+      <div class="card"><h3>Success Coaching</h3><p>Goal alignment and execution systems.</p></div>
+      <div class="card"><h3>Yoga</h3><p>Mind-body harmony.</p></div>
+      <div class="card"><h3>Ayurveda & Naturopathy</h3><p>Ancient wisdom, practical application.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="fade">
+  <div class="container dual">
     <div class="box">
       <h3>Who This Is For</h3>
       <ul>
-        <li>Individuals serious about self-transformation</li>
-        <li>Professionals seeking clarity and discipline</li>
-        <li>People aligned with structured growth</li>
-        <li>Those valuing health, balance, and excellence</li>
+        <li>Serious seekers of growth</li>
+        <li>Professionals valuing discipline</li>
+        <li>People seeking holistic excellence</li>
+        <li>Those open to guided transformation</li>
       </ul>
     </div>
-
     <div class="box">
       <h3>Who This Is Not For</h3>
       <ul>
-        <li>Shortcut or instant-result seekers</li>
+        <li>Shortcut seekers</li>
         <li>Entertainment-driven self-help consumers</li>
-        <li>Those unwilling to follow guidance</li>
-        <li>People resistant to discipline</li>
+        <li>Those unwilling to change habits</li>
       </ul>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ========== CONNECT ========== -->
-<div class="sattva-container section connect" id="connect">
-  <h2 class="section-title">Connect With Us</h2>
-  <div class="divider"></div>
-
-  <div class="socials">
-    <a href="https://www.linkedin.com/company/sattvacare-wellness" target="_blank">LinkedIn</a>
-    <a href="#" target="_blank">Instagram</a>
-    <a href="#" target="_blank">WhatsApp</a>
+<section class="connect fade" id="connect">
+  <div class="container">
+    <h2>Connect With Us</h2>
+    <div class="socials" style="margin-top:20px;">
+      <a href="https://www.linkedin.com/company/sattvacare-wellness" target="_blank">LinkedIn</a>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">WhatsApp</a>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- ========== FOOTER ========== -->
-<div class="footer">
+<footer>
   © SattvaCare Wellness — Structured Growth. Balanced Life.
-</div>
+</footer>
+
+<script>
+const faders=document.querySelectorAll(".fade");
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add("show");}
+});
+},{threshold:0.2});
+faders.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
