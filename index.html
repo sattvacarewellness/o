@@ -11,7 +11,7 @@
   --gold-light: #e6c873;
   --bg-soft: #f8f6f2;
   --text-main: #1e1e1e;
-  --text-muted: #666;
+  --text-muted: #555;
 }
 
 * {
@@ -131,6 +131,26 @@ header {
   box-shadow: 0 10px 25px rgba(176,138,46,0.25);
 }
 
+.info-section {
+  background: #fff7e6;
+  border-left: 6px solid var(--gold-dark);
+  padding: 40px 30px;
+  margin: 50px 0;
+  border-radius: 12px;
+}
+
+.info-section h3 {
+  color: var(--gold-dark);
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+.info-section p {
+  color: var(--text-main);
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -138,20 +158,26 @@ header {
   margin-top: 50px;
 }
 
-.card {
+.card, .box {
   background: #fff;
   padding: 30px;
   border-radius: 18px;
   border: 1px solid rgba(176,138,46,0.2);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.card h3 {
+.card:hover, .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(176,138,46,0.2);
+}
+
+.card h3, .box h3 {
   color: var(--gold-dark);
   margin-bottom: 10px;
-  font-size: 1.05rem;
 }
 
-.card p {
+.card p, .box p, .box li {
   color: var(--text-muted);
   font-size: 0.95rem;
 }
@@ -160,34 +186,56 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   gap: 40px;
+  margin-top: 40px;
 }
 
-.box {
-  background: #fff;
-  padding: 35px;
-  border-radius: 18px;
-  border: 1px solid rgba(176,138,46,0.2);
-}
-
-.box h3 {
+.dual .btn-small {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  border-radius: 25px;
+  border: 1px solid var(--gold-dark);
   color: var(--gold-dark);
-  margin-bottom: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.box li {
-  margin-bottom: 10px;
-  color: var(--text-muted);
+.dual .btn-small.primary {
+  background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
+  color: #fff;
+  border: none;
+}
+
+.dual .btn-small:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(176,138,46,0.25);
 }
 
 .connect {
   text-align: center;
+  margin-top: 40px;
 }
 
-.socials a {
-  margin: 0 14px;
+.socials .btn-social {
+  display: inline-block;
+  margin: 10px 14px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 0.95rem;
   text-decoration: none;
-  color: var(--gold-dark);
+  color: #fff;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.socials .linkedin {background: #0077b5;}
+.socials .instagram {background: #e1306c;}
+.socials .whatsapp {background: #25d366;}
+
+.socials .btn-social:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 footer {
@@ -220,6 +268,19 @@ footer {
       <a href="#connect" class="btn">Book Free Consultation</a>
       <a href="#connect" class="btn primary">Become an Official Member</a>
     </div>
+
+    <div class="info-section fade">
+      <h3>SattvaCare – Your Wellness Care-Taker</h3>
+      <p>You don't need someone else to be joyful, you just need your natural optimal wellness back to feel joy within!</p>
+      <h3>How We Can Help You</h3>
+      <p>We at SattvaCare will guide you through your transformation into your best version, by scientifically applying principles backed by Yoga, Ayurveda & Naturopathy.</p>
+      <h3>Why Choose Us?</h3>
+      <p>We are not just wellness advisors giving random suggestions on your lifestyle. We are your partners in holistic transformation. We are strongly backed by Ayurveda, Yoga, Naturopathy and provide promising transformation, often visible within few days.</p>
+      <h3>Our Vision</h3>
+      <p>To help you achieve your natural optimal wellness back, with scientific implementation of techniques based on Ayurveda, Yoga & Naturopathy.</p>
+      <h3>Who We Are</h3>
+      <p>We are SattvaCare. Our mission is to transform lives holistically – mentally, physically, emotionally, professionally – guiding everyone towards their best version and natural optimal wellness state, Sattvam.</p>
+    </div>
   </div>
 </section>
 
@@ -228,14 +289,38 @@ footer {
     <h2 style="text-align:center;">Membership Benefits</h2>
 
     <div class="grid">
-      <div class="card"><h3>Expert Mentorship</h3><p>Certified professionals guiding your transformation.</p></div>
-      <div class="card"><h3>Lifestyle Coaching</h3><p>Daily structure, habits, and discipline.</p></div>
-      <div class="card"><h3>Health & Fitness</h3><p>Energy, strength, and preventive care.</p></div>
-      <div class="card"><h3>Mental Well-being</h3><p>Clarity, emotional stability, inner strength.</p></div>
-      <div class="card"><h3>Personality Development</h3><p>Confidence, presence, leadership.</p></div>
-      <div class="card"><h3>Success Coaching</h3><p>Goal alignment and execution systems.</p></div>
-      <div class="card"><h3>Yoga</h3><p>Mind-body harmony.</p></div>
-      <div class="card"><h3>Ayurveda & Naturopathy</h3><p>Ancient wisdom, practical application.</p></div>
+      <div class="card">
+        <h3>Expert Mentorship</h3><p>Certified professionals guiding your transformation.</p>
+        <a href="#connect" class="btn-small primary">Join Community</a>
+      </div>
+      <div class="card">
+        <h3>Lifestyle Coaching</h3><p>Daily structure, habits, and discipline.</p>
+        <a href="#connect" class="btn-small primary">Book Consultation</a>
+      </div>
+      <div class="card">
+        <h3>Health & Fitness</h3><p>Energy, strength, and preventive care.</p>
+        <a href="#connect" class="btn-small primary">Become Member</a>
+      </div>
+      <div class="card">
+        <h3>Mental Well-being</h3><p>Clarity, emotional stability, inner strength.</p>
+        <a href="#connect" class="btn-small primary">Join Community</a>
+      </div>
+      <div class="card">
+        <h3>Personality Development</h3><p>Confidence, presence, leadership.</p>
+        <a href="#connect" class="btn-small primary">Book Consultation</a>
+      </div>
+      <div class="card">
+        <h3>Success Coaching</h3><p>Goal alignment and execution systems.</p>
+        <a href="#connect" class="btn-small primary">Become Member</a>
+      </div>
+      <div class="card">
+        <h3>Yoga</h3><p>Mind-body harmony.</p>
+        <a href="#connect" class="btn-small primary">Join Community</a>
+      </div>
+      <div class="card">
+        <h3>Ayurveda & Naturopathy</h3><p>Ancient wisdom, practical application.</p>
+        <a href="#connect" class="btn-small primary">Book Consultation</a>
+      </div>
     </div>
   </div>
 </section>
@@ -250,6 +335,7 @@ footer {
         <li>People seeking holistic excellence</li>
         <li>Those open to guided transformation</li>
       </ul>
+      <a href="#connect" class="btn-small primary">Join Community</a>
     </div>
     <div class="box">
       <h3>Who This Is Not For</h3>
@@ -258,6 +344,7 @@ footer {
         <li>Entertainment-driven self-help consumers</li>
         <li>Those unwilling to change habits</li>
       </ul>
+      <a href="#connect" class="btn-small primary">Book Consultation</a>
     </div>
   </div>
 </section>
@@ -266,9 +353,9 @@ footer {
   <div class="container">
     <h2>Connect With Us</h2>
     <div class="socials" style="margin-top:20px;">
-      <a href="https://www.linkedin.com/company/sattvacare-wellness" target="_blank">LinkedIn</a>
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">WhatsApp</a>
+      <a href="https://www.linkedin.com/company/sattvacare-wellness" target="_blank" class="btn-social linkedin">LinkedIn</a>
+      <a href="#" target="_blank" class="btn-social instagram">Instagram</a>
+      <a href="#" target="_blank" class="btn-social whatsapp">WhatsApp</a>
     </div>
   </div>
 </section>
