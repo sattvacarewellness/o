@@ -1,0 +1,256 @@
+<style>
+/* ========== SATTVACARE THEME ========== */
+:root {
+  --saffron: #c28a2c;
+  --soft-gold: #e7c36a;
+  --warm-beige: #f8f4ec;
+  --charcoal: #1f1f1f;
+  --soft-gray: #6b6b6b;
+  --border-soft: rgba(194,138,44,0.25);
+}
+
+body {
+  background: var(--warm-beige);
+  color: var(--charcoal);
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+.sattva-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 8%;
+}
+
+/* ========== HERO ========== */
+.hero {
+  padding: 90px 0 80px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.hero h1 span {
+  background: linear-gradient(to right, var(--soft-gold), var(--saffron));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 14px;
+  font-size: 1.15rem;
+  color: var(--soft-gray);
+  font-style: italic;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, var(--soft-gold), var(--saffron));
+  margin: 26px auto 36px;
+  border-radius: 4px;
+}
+
+/* ========== BUTTONS ========== */
+.cta-group {
+  margin-top: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 13px 26px;
+  border-radius: 28px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--saffron);
+  color: var(--saffron);
+  transition: all 0.25s ease;
+}
+
+.cta-btn.primary {
+  background: linear-gradient(to right, var(--soft-gold), var(--saffron));
+  color: #ffffff;
+  border: none;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(194,138,44,0.25);
+}
+
+/* ========== SECTION ========== */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 760px;
+  margin: 14px auto 0;
+  color: var(--soft-gray);
+}
+
+/* ========== BENEFITS GRID ========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 50px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid var(--border-soft);
+}
+
+.card h3 {
+  color: var(--saffron);
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--soft-gray);
+  line-height: 1.55;
+}
+
+/* ========== WHO FOR / NOT FOR ========== */
+.dual {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 36px;
+  margin-top: 50px;
+}
+
+.box {
+  background: #ffffff;
+  padding: 34px;
+  border-radius: 18px;
+  border: 1px solid var(--border-soft);
+}
+
+.box h3 {
+  color: var(--saffron);
+  margin-bottom: 18px;
+}
+
+.box ul {
+  padding-left: 18px;
+}
+
+.box li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: var(--soft-gray);
+}
+
+/* ========== CONNECT ========== */
+.connect {
+  text-align: center;
+}
+
+.socials a {
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--saffron);
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  margin-top: 80px;
+  padding: 40px 0 15px;
+  text-align: center;
+  border-top: 1px solid var(--border-soft);
+  font-size: 0.85rem;
+  color: var(--soft-gray);
+}
+</style>
+
+<!-- ========== HERO ========== -->
+<div class="sattva-container hero">
+  <h1><span>SattvaCare Wellness</span></h1>
+  <p>“From Sattva arises Wellness”</p>
+  <div class="divider"></div>
+
+  <div class="cta-group">
+    <a href="#connect" class="cta-btn">Join Community Today – Free</a>
+    <a href="#connect" class="cta-btn">Book Free Consultation</a>
+    <a href="#connect" class="cta-btn primary">Become an Official Member</a>
+  </div>
+</div>
+
+<!-- ========== MEMBERSHIP BENEFITS ========== -->
+<div class="sattva-container section">
+  <h2 class="section-title">Membership Benefits</h2>
+  <p class="section-subtitle">
+    A structured ecosystem for complete human optimization — health, mind, conduct, and success.
+  </p>
+
+  <div class="grid">
+    <div class="card"><h3>Expert Mentorship</h3><p>Certified professionals guiding health, lifestyle, and performance.</p></div>
+    <div class="card"><h3>Lifestyle Coaching</h3><p>Daily routines, habit systems, and disciplined living.</p></div>
+    <div class="card"><h3>Health Transformation</h3><p>Ayurveda, naturopathy, nutrition, and preventive care.</p></div>
+    <div class="card"><h3>Fitness & Vitality</h3><p>Strength, flexibility, endurance, and energy optimization.</p></div>
+    <div class="card"><h3>Mental Well-Being</h3><p>Clarity, focus, emotional regulation, and resilience.</p></div>
+    <div class="card"><h3>Personality Development</h3><p>Confidence, discipline, leadership presence.</p></div>
+    <div class="card"><h3>Success Coaching</h3><p>Goal clarity, execution systems, life strategy.</p></div>
+    <div class="card"><h3>Yoga • Ayurveda • Naturopathy</h3><p>Ancient sciences applied practically to modern life.</p></div>
+  </div>
+</div>
+
+<!-- ========== WHO IT IS FOR ========== -->
+<div class="sattva-container section">
+  <div class="dual">
+    <div class="box">
+      <h3>Who This Is For</h3>
+      <ul>
+        <li>Individuals serious about self-transformation</li>
+        <li>Professionals seeking clarity and discipline</li>
+        <li>People aligned with structured growth</li>
+        <li>Those valuing health, balance, and excellence</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3>Who This Is Not For</h3>
+      <ul>
+        <li>Shortcut or instant-result seekers</li>
+        <li>Entertainment-driven self-help consumers</li>
+        <li>Those unwilling to follow guidance</li>
+        <li>People resistant to discipline</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CONNECT ========== -->
+<div class="sattva-container section connect" id="connect">
+  <h2 class="section-title">Connect With Us</h2>
+  <div class="divider"></div>
+
+  <div class="socials">
+    <a href="https://www.linkedin.com/company/sattvacare-wellness" target="_blank">LinkedIn</a>
+    <a href="#" target="_blank">Instagram</a>
+    <a href="#" target="_blank">WhatsApp</a>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<div class="footer">
+  © SattvaCare Wellness — Structured Growth. Balanced Life.
+</div>
