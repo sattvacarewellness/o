@@ -4,66 +4,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SattvaCare Wellness</title>
+
 <style>
 /* === BASIC RESET === */
-* {margin:0; padding:0; box-sizing:border-box; font-family: "Segoe UI", sans-serif;}
-body {background: #0f0f0f; color: #f5f5f5; line-height:1.6;}
+* {margin:0; padding:0; box-sizing:border-box; font-family:"Segoe UI", sans-serif;}
+body {background:#fff8f0; color:#333; line-height:1.6;}
 a {text-decoration:none; color:inherit;}
 .container {max-width:1200px; margin:auto; padding:0 20px;}
 
 /* === HEADER === */
-header {padding:20px 40px; display:flex; justify-content:space-between; align-items:center;}
-header span {font-size:1.5rem; font-weight:700; color:#f4c96b;}
+header {padding:20px 40px; display:flex; justify-content:space-between; align-items:center; background:#fffaf0; box-shadow:0 3px 15px rgba(0,0,0,0.05);}
+.logo img {height:50px;}
+.logo span {font-size:1.5rem; font-weight:700; color:#b08a2e; margin-left:12px;}
 
 /* === HERO === */
-.hero {text-align:center; padding:80px 20px;}
-.hero h1 {font-size:3rem; font-weight:700;}
-.hero .tagline {margin-top:12px; font-size:1.4rem; color:#f4c96b; font-style:italic;}
+.hero {text-align:center; padding:80px 20px; background: linear-gradient(to bottom, #fffaf0, #fff1d6);}
+.hero h1 {font-size:3rem; font-weight:700; color:#b08a2e;}
+.hero .tagline {margin-top:12px; font-size:1.4rem; color:#f4c96b; font-style:italic; font-weight:600;}
 .hero .highlight {margin-top:25px;}
-.hero .highlight span {padding:6px 14px; margin:4px; border-radius:20px; background: rgba(244,201,107,0.15); color:#f4c96b; display:inline-block; font-weight:600;}
+.hero .highlight span {padding:6px 14px; margin:4px; border-radius:20px; background: rgba(244,201,107,0.15); color:#b08a2e; display:inline-block; font-weight:700; animation: glow 2s ease-in-out infinite alternate;}
+
+@keyframes glow {
+  0% {text-shadow:0 0 5px #f4c96b;}
+  50% {text-shadow:0 0 15px #f4c96b, 0 0 25px #ffe4b5;}
+  100% {text-shadow:0 0 5px #f4c96b;}
+}
 
 /* === BUTTONS === */
-.btn {display:inline-block; margin:10px 10px 10px 0; padding:12px 28px; border-radius:30px; font-weight:600; transition:all 0.3s ease; text-align:center;}
+.btn {display:inline-block; margin:10px 10px 10px 0; padding:12px 28px; border-radius:30px; font-weight:600; transition:all 0.3s ease; text-align:center; box-shadow:0 4px 15px rgba(244,201,107,0.3);}
 .btn-primary {background: linear-gradient(to right,#f4c96b,#b08a2e); color:#fff; border:none;}
-.btn-secondary {border:1px solid #f4c96b; color:#f4c96b; background:none;}
-.btn:hover {transform:translateY(-3px); box-shadow:0 8px 25px rgba(244,201,107,0.3);}
+.btn-secondary {border:1px solid #b08a2e; color:#b08a2e; background:none;}
+.btn:hover {transform:translateY(-3px); box-shadow:0 8px 25px rgba(244,201,107,0.5);}
 
 /* === INFO SECTION === */
-.info-section {background:#171818; padding:40px 30px; border-radius:12px; margin:50px 0; text-align:center;}
-.info-section h3 {color:#f4c96b; margin-bottom:15px;}
+.info-section {background:#fff3e0; padding:40px 30px; border-radius:12px; margin:50px 0; text-align:center; box-shadow:0 6px 20px rgba(176,138,46,0.2);}
+.info-section h3 {color:#b08a2e; margin-bottom:15px;}
 .info-section p {margin-bottom:15px; font-size:1.05rem;}
 
 /* === GRID CARDS === */
 .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:25px; margin-top:30px;}
-.card {background:#1a1a1a; padding:25px; border-radius:14px; transition:transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer;}
-.card:hover {transform:translateY(-6px); box-shadow:0 15px 40px rgba(244,201,107,0.25);}
-.card h3 {color:#f4c96b; margin-bottom:10px;}
-.card p {font-size:1rem; color:#ddd;}
+.card {background:#fff8f0; padding:25px; border-radius:14px; transition:transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer; box-shadow:0 4px 15px rgba(244,201,107,0.2);}
+.card:hover {transform:translateY(-6px); box-shadow:0 12px 35px rgba(244,201,107,0.4);}
+.card h3 {color:#b08a2e; margin-bottom:10px;}
+.card p {font-size:1rem; color:#555;}
 
 /* === DUAL BOXES === */
 .dual {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px; margin-top:50px;}
-.box {background:#1a1a1a; padding:30px; border-radius:16px;}
-.box h3 {color:#f4c96b; margin-bottom:15px;}
+.box {background:#fffaf0; padding:30px; border-radius:16px; box-shadow:0 4px 15px rgba(244,201,107,0.2);}
+.box h3 {color:#b08a2e; margin-bottom:15px;}
 .box ul {padding-left:18px;}
-.box li {margin-bottom:10px;}
+.box li {margin-bottom:10px; color:#555;}
 
 /* === CONNECT === */
 .connect {text-align:center; margin-top:70px;}
-.socials a {display:inline-block; margin:10px 14px; padding:12px 28px; border-radius:30px; font-weight:600; transition:all 0.3s ease;}
+.socials a {display:inline-block; margin:10px 14px; padding:12px 28px; border-radius:30px; font-weight:600; transition:all 0.3s ease; box-shadow:0 4px 15px rgba(244,201,107,0.3);}
 .linkedin {background:#0077b5; color:#fff;}
 .instagram {background:#e1306c; color:#fff;}
 .whatsapp {background:#25d366; color:#fff;}
-.socials a:hover {transform:translateY(-3px); box-shadow:0 10px 25px rgba(244,201,107,0.3);}
+.socials a:hover {transform:translateY(-3px); box-shadow:0 10px 25px rgba(244,201,107,0.5);}
 
 /* === FOOTER === */
-footer {margin-top:80px; padding:25px; text-align:center; font-size:0.9rem; opacity:0.8; color:#ccc;}
+footer {margin-top:80px; padding:25px; text-align:center; font-size:0.9rem; color:#555;}
 </style>
 </head>
 
 <body>
 
 <header>
-  <span>SattvaCare Wellness</span>
+  <div class="logo">
+    <img src="logo.png" alt="SattvaCare Wellness Logo">
+    <span>SattvaCare Wellness</span>
+  </div>
 </header>
 
 <main>
@@ -83,8 +94,16 @@ footer {margin-top:80px; padding:25px; text-align:center; font-size:0.9rem; opac
 
 <!-- INFO -->
 <section class="info-section">
-  <h3>Transform Your Life Holistically</h3>
-  <p>SattvaCare Wellness guides you to break bad lifestyle patterns, adopt health-conscious living, and unlock long, youthful, high-energy lifespan using Indian Knowledge Systems validated by modern science.</p>
+  <h3>SattvaCare – Your Wellness Care-Taker</h3>
+  <p>You don't need someone else to be joyful, you just need your natural optimal wellness back to feel joy within!</p>
+  <h3>How We Can Help You</h3>
+  <p>We at SattvaCare will guide you through your transformation into your best version, by scientifically applying principles backed by Yoga, Ayurveda & Naturopathy.</p>
+  <h3>Why Choose Us?</h3>
+  <p>We are not just wellness advisors giving random suggestions on your lifestyle. We are your partners in holistic transformation. We are strongly backed by Ayurveda, Yoga, Naturopathy and provide promising transformation, often visible within few days.</p>
+  <h3>Our Vision</h3>
+  <p>To help you achieve your natural optimal wellness back, with scientific implementation of techniques based on Ayurveda, Yoga & Naturopathy.</p>
+  <h3>Who We Are</h3>
+  <p>We are SattvaCare. Our mission is to transform lives holistically – mentally, physically, emotionally, professionally – guiding everyone towards their best version and natural optimal wellness state, Sattvam.</p>
 </section>
 
 <!-- CORE SERVICES GRID -->
@@ -94,32 +113,32 @@ footer {margin-top:80px; padding:25px; text-align:center; font-size:0.9rem; opac
 
     <a href="https://chat.whatsapp.com/DUFApU3eZTt8gYLcupRF5h" class="card">
       <h3>Expert Mentorship</h3>
-      <p>Personal guidance rooted in Yoga, Ayurveda, and timeless wisdom.</p>
+      <p>Guidance rooted in Indian Knowledge Systems.</p>
     </a>
 
     <a href="https://wa.me/qr/WZSCIEHYP3OPD1" class="card">
       <h3>Lifestyle Coaching</h3>
-      <p>Daily structure, habits, and discipline for holistic wellness.</p>
+      <p>Daily structure, habits, and discipline.</p>
     </a>
 
     <a href="https://forms.gle/ji78afV3oZgVMGiB8" class="card">
       <h3>Health & Vitality</h3>
-      <p>Energy, strength, immunity, and preventive care to enhance life.</p>
+      <p>Energy, strength, immunity, and preventive care.</p>
     </a>
 
     <a href="https://chat.whatsapp.com/DUFApU3eZTt8gYLcupRF5h" class="card">
       <h3>Mental Clarity</h3>
-      <p>Focus, emotional stability, and inner strength.</p>
+      <p>Focus, emotional stability, inner strength.</p>
     </a>
 
     <a href="https://wa.me/qr/WZSCIEHYP3OPD1" class="card">
       <h3>Personality Development</h3>
-      <p>Confidence, leadership, and value-based excellence.</p>
+      <p>Confidence, leadership, value-based excellence.</p>
     </a>
 
     <a href="https://forms.gle/ji78afV3oZgVMGiB8" class="card">
       <h3>Success & Performance</h3>
-      <p>Execution systems and growth alignment for personal & professional life.</p>
+      <p>Execution systems and growth alignment.</p>
     </a>
 
     <a href="https://chat.whatsapp.com/DUFApU3eZTt8gYLcupRF5h" class="card">
@@ -129,7 +148,7 @@ footer {margin-top:80px; padding:25px; text-align:center; font-size:0.9rem; opac
 
     <a href="https://wa.me/qr/WZSCIEHYP3OPD1" class="card">
       <h3>Ayurveda & Naturopathy</h3>
-      <p>Personalized lifestyle correction and rejuvenation.</p>
+      <p>Ancient wisdom applied practically for lifestyle correction.</p>
     </a>
 
     <a href="https://wa.me/qr/WZSCIEHYP3OPD1" class="card">
