@@ -6,14 +6,14 @@
 <title>SattvaCare Wellness</title>
 
 <style>
-/* === BASIC RESET === */
+/* === RESET & BASE === */
 * {margin:0; padding:0; box-sizing:border-box; font-family:"Segoe UI", sans-serif;}
-body {background:#fff8f0; color:#333; line-height:1.6;}
+body {background:#fffaf0; color:#333; line-height:1.6;}
 a {text-decoration:none; color:inherit;}
 .container {max-width:1200px; margin:auto; padding:0 20px;}
 
 /* === HEADER === */
-header {padding:20px 40px; display:flex; justify-content:space-between; align-items:center; background:#fffaf0; box-shadow:0 3px 15px rgba(0,0,0,0.05);}
+header {padding:20px 40px; display:flex; justify-content:space-between; align-items:center; background:#fffaf0; box-shadow:0 3px 15px rgba(176,138,46,0.15);}
 .logo img {height:50px;}
 .logo span {font-size:1.5rem; font-weight:700; color:#b08a2e; margin-left:12px;}
 
@@ -37,7 +37,7 @@ header {padding:20px 40px; display:flex; justify-content:space-between; align-it
 .btn:hover {transform:translateY(-3px); box-shadow:0 8px 25px rgba(244,201,107,0.5);}
 
 /* === INFO SECTION === */
-.info-section {background:#fff3e0; padding:40px 30px; border-radius:12px; margin:50px 0; text-align:center; box-shadow:0 6px 20px rgba(176,138,46,0.2);}
+.info-section {background:#fff3e0; padding:40px 30px; border-radius:12px; margin:50px 0; text-align:left; box-shadow:0 6px 20px rgba(176,138,46,0.2);}
 .info-section h3 {color:#b08a2e; margin-bottom:15px;}
 .info-section p {margin-bottom:15px; font-size:1.05rem;}
 
@@ -50,7 +50,8 @@ header {padding:20px 40px; display:flex; justify-content:space-between; align-it
 
 /* === DUAL BOXES === */
 .dual {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px; margin-top:50px;}
-.box {background:#fffaf0; padding:30px; border-radius:16px; box-shadow:0 4px 15px rgba(244,201,107,0.2);}
+.box {background:#fffaf0; padding:30px; border-radius:16px; box-shadow:0 4px 15px rgba(244,201,107,0.2); transition: all 0.3s ease;}
+.box:hover {box-shadow:0 10px 30px rgba(244,201,107,0.35);}
 .box h3 {color:#b08a2e; margin-bottom:15px;}
 .box ul {padding-left:18px;}
 .box li {margin-bottom:10px; color:#555;}
@@ -90,72 +91,58 @@ footer {margin-top:80px; padding:25px; text-align:center; font-size:0.9rem; colo
     <a href="https://wa.me/qr/WZSCIEHYP3OPD1" class="btn btn-secondary">Book Free Consultation</a>
     <a href="https://forms.gle/ji78afV3oZgVMGiB8" class="btn btn-primary">Become Official Member</a>
   </div>
-</section>
 
-<!-- INFO -->
-<section class="info-section">
-  <h3>SattvaCare – Your Wellness Care-Taker</h3>
-  <p>You don't need someone else to be joyful, you just need your natural optimal wellness back to feel joy within!</p>
-  <h3>How We Can Help You</h3>
-  <p>We at SattvaCare will guide you through your transformation into your best version, by scientifically applying principles backed by Yoga, Ayurveda & Naturopathy.</p>
-  <h3>Why Choose Us?</h3>
-  <p>We are not just wellness advisors giving random suggestions on your lifestyle. We are your partners in holistic transformation. We are strongly backed by Ayurveda, Yoga, Naturopathy and provide promising transformation, often visible within few days.</p>
-  <h3>Our Vision</h3>
-  <p>To help you achieve your natural optimal wellness back, with scientific implementation of techniques based on Ayurveda, Yoga & Naturopathy.</p>
-  <h3>Who We Are</h3>
-  <p>We are SattvaCare. Our mission is to transform lives holistically – mentally, physically, emotionally, professionally – guiding everyone towards their best version and natural optimal wellness state, Sattvam.</p>
+  <!-- BEGINNING MISSION STATEMENTS -->
+  <div class="info-section">
+    <h3>Igniting Positive Transformation</h3>
+    <p>At SattvaCare Wellness, we restore the natural state of Sattva within every individual 💛</p>
+
+    <h3>Our Mission</h3>
+    <p>Guided by the power of conscious living, we help individuals embrace healthier, mindful lifestyles — enhancing holistic well-being and unlocking their natural state of optimal wellness.</p>
+
+    <h3>Our 3 Core Services:</h3>
+    <p><strong>Purification:</strong> Detoxify body and mind, break unhealthy patterns, and cultivate devotion through systematic Yoga and Bhakti — the unique essence that sets SattvaCare apart ✨</p>
+    <p><strong>Performance:</strong> Enhance personal and professional potential by aligning health, values, and wisdom — grounded in Ayurveda, Bhagavadgita, and Niti Shaastras.</p>
+    <p><strong>Prolonging:</strong> Slow the aging process while amplifying vitality, strength, and intelligence — combining Yoga, Ayurveda, and Rasa-Śāstra to extend a youthful, energetic lifespan.</p>
+
+    <p>In short, we call it <strong>“Purified · Performance · Prolonging”</strong> 🌟</p>
+    <p>We provide structured guidance for breaking harmful habits, adopting sustainable wellness practices, and unlocking the secret to a long, vibrant life.</p>
+    <p>Our solutions are rooted in Indian Knowledge Systems (Yoga, Ayurveda, Rasa-Śāstra, Bhagavadgita) and validated with modern scientific reasoning for Sāttvik, evidence-based outcomes.</p>
+    <p>SattvaCare delivers authentic Indian-origin solutions to modern lifestyle challenges. Follow us to stay updated 💫</p>
+  </div>
 </section>
 
 <!-- CORE SERVICES GRID -->
 <section>
-  <h2>Our Core Services</h2>
+  <h2 style="text-align:center; margin-top:40px;">Our Core Services</h2>
   <div class="container grid">
-
     <a href="https://chat.whatsapp.com/DUFApU3eZTt8gYLcupRF5h" class="card">
-      <h3>Expert Mentorship</h3>
-      <p>Guidance rooted in Indian Knowledge Systems.</p>
+      <h3>Expert Mentorship</h3><p>Guidance rooted in Indian Knowledge Systems.</p>
     </a>
-
     <a href="https://wa.me/qr/WZSCIEHYP3OPD1" class="card">
-      <h3>Lifestyle Coaching</h3>
-      <p>Daily structure, habits, and discipline.</p>
+      <h3>Lifestyle Coaching</h3><p>Daily structure, habits, and discipline.</p>
     </a>
-
     <a href="https://forms.gle/ji78afV3oZgVMGiB8" class="card">
-      <h3>Health & Vitality</h3>
-      <p>Energy, strength, immunity, and preventive care.</p>
+      <h3>Health & Vitality</h3><p>Energy, strength, immunity, and preventive care.</p>
     </a>
-
     <a href="https://chat.whatsapp.com/DUFApU3eZTt8gYLcupRF5h" class="card">
-      <h3>Mental Clarity</h3>
-      <p>Focus, emotional stability, inner strength.</p>
+      <h3>Mental Clarity</h3><p>Focus, emotional stability, inner strength.</p>
     </a>
-
     <a href="https://wa.me/qr/WZSCIEHYP3OPD1" class="card">
-      <h3>Personality Development</h3>
-      <p>Confidence, leadership, value-based excellence.</p>
+      <h3>Personality Development</h3><p>Confidence, leadership, value-based excellence.</p>
     </a>
-
     <a href="https://forms.gle/ji78afV3oZgVMGiB8" class="card">
-      <h3>Success & Performance</h3>
-      <p>Execution systems and growth alignment.</p>
+      <h3>Success & Performance</h3><p>Execution systems and growth alignment.</p>
     </a>
-
     <a href="https://chat.whatsapp.com/DUFApU3eZTt8gYLcupRF5h" class="card">
-      <h3>Yoga & Sādhanā</h3>
-      <p>Systematic Ashtanga Yoga practice for mind-body harmony.</p>
+      <h3>Yoga & Sādhanā</h3><p>Systematic Ashtanga Yoga practice for mind-body harmony.</p>
     </a>
-
     <a href="https://wa.me/qr/WZSCIEHYP3OPD1" class="card">
-      <h3>Ayurveda & Naturopathy</h3>
-      <p>Ancient wisdom applied practically for lifestyle correction.</p>
+      <h3>Ayurveda & Naturopathy</h3><p>Ancient wisdom applied practically for lifestyle correction.</p>
     </a>
-
     <a href="https://wa.me/qr/WZSCIEHYP3OPD1" class="card">
-      <h3>De-addiction Support</h3>
-      <p>Break addictions with structured guidance & Bhakti-based support.</p>
+      <h3>De-addiction Support</h3><p>Break addictions with structured guidance & Bhakti-based support.</p>
     </a>
-
   </div>
 </section>
 
