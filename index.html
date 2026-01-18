@@ -5,13 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SattvaCare Wellness</title>
 
-<meta name="description" content="SattvaCare – Purified Performance Prolonging. De-addiction, Wellness & Healthy Longevity using Yoga, Ayurveda & Indian Knowledge Systems with scientific validation.">
-<meta name="keywords" content="SattvaCare, Purified Performance Prolonging, Yoga, Ayurveda, Longevity, De-addiction, Wellness, Indian Knowledge Systems">
+<meta name="description" content="SattvaCare Wellness – Purified Performance Prolonging through Yoga, Ayurveda & Indian Knowledge Systems with scientific validation.">
+<meta name="keywords" content="SattvaCare Wellness, Yoga, Ayurveda, Longevity, De-addiction, Wellness, Indian Knowledge Systems">
 <meta name="author" content="SattvaCare Wellness">
 <meta name="robots" content="index, follow">
 
 <style>
-/* ---- SAME CSS AS BEFORE (UNCHANGED) ---- */
 :root {
   --gold-dark: #b08a2e;
   --gold-light: #e6c873;
@@ -23,40 +22,123 @@
 body { font-family: "Inter", system-ui, sans-serif; background: var(--bg-soft); color: var(--text-main); line-height: 1.6; }
 .container { max-width: 1200px; margin: auto; padding: 0 7%; }
 section { padding: 90px 0; }
+
 .fade { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
 .fade.show { opacity: 1; transform: translateY(0); }
-header { padding: 22px 0; border-bottom: 1px solid rgba(0,0,0,0.05); background: #fff; position: sticky; top: 0; z-index: 100; }
+
+header {
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 .nav { display: flex; align-items: center; justify-content: space-between; }
 .logo { display: flex; align-items: center; gap: 12px; }
 .logo img { height: 40px; }
-.logo span { font-weight: 600; font-size: 1.1rem;
-background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
--webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.logo span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hero { text-align: center; padding: 110px 0; }
 .hero h1 { font-size: 2.8rem; font-weight: 600; }
 .hero h1 span {
-background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
--webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .hero p { margin-top: 14px; font-size: 1.15rem; color: var(--text-muted); font-style: italic; }
+
 .buttons { margin-top: 35px; }
-.btn { display: inline-block; margin: 10px; padding: 14px 30px; border-radius: 30px;
-font-size: 0.95rem; text-decoration: none; border: 1px solid var(--gold-dark);
-color: var(--gold-dark); transition: all 0.3s ease; }
-.btn.primary { background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
-color: #fff; border: none; }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(176,138,46,0.25); }
-.info-section { background: #fff7e6; border-left: 6px solid var(--gold-dark);
-padding: 40px 30px; margin: 50px 0; border-radius: 12px; }
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid var(--gold-dark);
+  color: var(--gold-dark);
+  transition: all 0.3s ease;
+}
+.btn.primary {
+  background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
+  color: #fff;
+  border: none;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(176,138,46,0.25);
+}
+
+.info-section {
+  background: #fff7e6;
+  border-left: 6px solid var(--gold-dark);
+  padding: 40px 30px;
+  margin: 50px 0;
+  border-radius: 12px;
+}
 .info-section h3 { color: var(--gold-dark); margin-bottom: 15px; font-size: 1.25rem; }
-.info-section p { color: var(--text-main); margin-bottom: 15px; font-size: 1rem; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-gap: 30px; margin-top: 50px; }
-.card { background: #fff; padding: 30px; border-radius: 18px;
-border: 1px solid rgba(176,138,46,0.2); transition: all 0.3s ease; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(176,138,46,0.2); }
-.card h3 { color: var(--gold-dark); margin-bottom: 10px; }
-.card p { color: var(--text-muted); font-size: 0.95rem; }
-footer { padding: 40px 0 20px; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
+.info-section p { color: var(--text-main); margin-bottom: 15px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+.card, .box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(176,138,46,0.2);
+  transition: all 0.3s ease;
+}
+.card:hover, .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(176,138,46,0.2);
+}
+.card h3, .box h3 { color: var(--gold-dark); margin-bottom: 10px; }
+.card p, .box p, .box li { color: var(--text-muted); font-size: 0.95rem; }
+
+.dual {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.connect { text-align: center; margin-top: 40px; }
+.socials .btn-social {
+  display: inline-block;
+  margin: 10px 14px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.socials .linkedin { background: #0077b5; }
+.socials .instagram { background: #e1306c; }
+.socials .whatsapp { background: #25d366; }
+.socials .btn-social:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+footer {
+  padding: 40px 0 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
 </style>
 </head>
 
@@ -65,8 +147,8 @@ footer { padding: 40px 0 20px; text-align: center; font-size: 0.85rem; color: va
 <header>
   <div class="container nav">
     <div class="logo">
-      <img src="logo.png" alt="SattvaCare Logo">
-      <span>SattvaCare</span>
+      <img src="logo.png" alt="SattvaCare Wellness Logo">
+      <span>SattvaCare Wellness</span>
     </div>
   </div>
 </header>
@@ -75,7 +157,7 @@ footer { padding: 40px 0 20px; text-align: center; font-size: 0.85rem; color: va
 
 <section class="hero fade">
   <div class="container">
-    <h1><span>SattvaCare</span></h1>
+    <h1><span>SattvaCare Wellness</span></h1>
     <p>Purified Performance Prolonging</p>
 
     <div class="buttons">
@@ -85,46 +167,98 @@ footer { padding: 40px 0 20px; text-align: center; font-size: 0.85rem; color: va
     </div>
 
     <div class="info-section fade">
-      <h3>What SattvaCare Does</h3>
+      <h3>What SattvaCare Wellness Does</h3>
       <p>
-        SattvaCare helps individuals break destructive lifestyle patterns, restore health and clarity,
-        and extend healthy human lifespan through a structured system rooted in Indian Knowledge Systems
-        and validated by scientific reasoning.
+        SattvaCare Wellness helps individuals break destructive lifestyle patterns, restore health and clarity,
+        and extend healthy human lifespan using Indian Knowledge Systems validated by science.
       </p>
 
       <h3>Our Core System</h3>
       <p>
-        We operate through a three-pillar framework called <b>Purified Performance Prolonging</b>,
-        designed to purify degeneration, restore optimal performance, and prolong vitality.
+        We operate through a structured framework called <b>Purified Performance Prolonging</b> —
+        Purification, Performance, and Prolonging.
       </p>
 
-      <h3>1) Purification</h3>
+      <h3>Purification</h3>
       <p>
         De-addiction through systematic Yoga, detoxification based on Vedic Naturopathy,
-        and inner stabilization through Bhakti of God (Krishna),
-        all guided by Ashtanga Yoga.
+        and inner stability through Bhakti of God (Krishna), guided by Ashtanga Yoga.
       </p>
 
-      <h3>2) Performance</h3>
+      <h3>Performance</h3>
       <p>
-        Enhancing physical health, mental clarity, values, discipline, and wisdom
-        using Ayurveda, Bhagavad Gītā, and Nīti Śāstras
-        for real-world personal and professional excellence.
+        Enhancing health, discipline, values, and wisdom using Ayurveda,
+        Bhagavad Gītā, and Nīti Śāstras for real-world excellence.
       </p>
 
-      <h3>3) Prolonging</h3>
+      <h3>Prolonging</h3>
       <p>
         Slowing biological ageing and enhancing vitality using Yoga, Ayurveda, and Rasa-Śāstra.
-        Classical Indian frameworks describe the possibility of lifespans exceeding 150 years
-        under ideal conditions. SattvaCare works toward this theoretical upper potential
-        by prioritizing youthfulness, vitality, and cognitive strength.
+        Classical Indian frameworks describe the potential of 150+ year lifespans under ideal conditions.
+        SattvaCare Wellness works toward this theoretical upper potential by prioritizing youthfulness and vitality.
       </p>
     </div>
   </div>
 </section>
 
+<section class="fade">
+  <div class="container">
+    <h2 style="text-align:center;">
+      Be a Part of our Family 💛<br>
+      Be a SattvaCare Wellness Member
+    </h2>
+
+    <div class="grid">
+      <div class="card"><h3>Expert Mentorship</h3><p>Guided transformation rooted in Yoga & Ayurveda.</p></div>
+      <div class="card"><h3>Lifestyle Coaching</h3><p>Daily discipline and conscious living.</p></div>
+      <div class="card"><h3>Health & Vitality</h3><p>Energy, immunity, and preventive care.</p></div>
+      <div class="card"><h3>Mental Clarity</h3><p>Focus, emotional stability, inner strength.</p></div>
+      <div class="card"><h3>Personality Development</h3><p>Confidence and leadership grounded in values.</p></div>
+      <div class="card"><h3>Success & Performance</h3><p>Goal clarity and execution systems.</p></div>
+      <div class="card"><h3>Yoga & Sādhanā</h3><p>Systematic Ashtanga Yoga practice.</p></div>
+      <div class="card"><h3>Ayurveda & Naturopathy</h3><p>Personalized lifestyle correction.</p></div>
+      <div class="card"><h3>De-addiction Support</h3><p>Breaking addictions through discipline.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="fade">
+  <div class="container dual">
+    <div class="box">
+      <h3>Who SattvaCare Wellness Is For</h3>
+      <ul>
+        <li>Serious seekers of transformation</li>
+        <li>People who value discipline and clarity</li>
+        <li>Those seeking holistic excellence</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3>Who SattvaCare Wellness Is Not For</h3>
+      <ul>
+        <li>Shortcut seekers</li>
+        <li>Entertainment-driven consumers</li>
+        <li>Those unwilling to change</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="connect fade">
+  <div class="container">
+    <h2>Connect With SattvaCare Wellness</h2>
+    <div class="socials">
+      <a href="https://www.linkedin.com/company/sattvacare-wellness" class="btn-social linkedin">LinkedIn</a>
+      <a href="https://www.instagram.com/sattvacarewellness" class="btn-social instagram">Instagram</a>
+      <a href="https://wa.me/qr/WZSCIEHYP3OPD1" class="btn-social whatsapp">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
 <footer>
-  © SattvaCare — Indian Knowledge Systems for Modern Life 💛
+  © SattvaCare Wellness — Made in India with Indian Knowledge 💛
 </footer>
 
 <script>
